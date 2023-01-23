@@ -1,0 +1,54 @@
+<div class="container">
+    <h2 class="text-center">Update Product Details</h2>
+
+    <form (ngSubmit)="updateProduct(updateProductForm)" #updateProductForm="ngForm" class="row g-3">
+        <div class="col-md-6">
+            <label for="validationServer01" class="form-label">Product Id</label>
+           <input type="text" name="id" [(ngModel)]="productDetails.id" class="form-control" id="validationServer01" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer02" class="form-label">Product Name</label>
+       <input type="text" name="ProductName"  [(ngModel)]="productDetails.ProductName" class="form-control"id="validationServer02" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer03" class="form-label">Product Description</label>
+       <input type="text" name="Description" [(ngModel)]="productDetails.Description"   class="form-control"id="validationServer03" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer04" class="form-label">Product rating</label>
+       <input type="text" name="rating"  [(ngModel)]="productDetails.rating" class="form-control" id="validationServer04" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer05" class="form-label">Product Price</label>
+       <input type="text" name="price"  [(ngModel)]="productDetails. price" class="form-control"id="validationServer05" required>
+    </div>
+ <div class="col-md-6">
+        <label for="validationServer06" class="form-label">Product Warranty</label>
+       <input type="text" name="warranty"  [(ngModel)]="productDetails.warranty" class="form-control"id="validationServer06" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer07" class="form-label">Product Review</label>
+       <input type="text" name="review"  [(ngModel)]="productDetails.review" class="form-control"id="validationServer07" required>
+    </div>
+    <div class="col-md-6">
+        <label for="validationServer08" class="form-label">Product Vendor Name</label>
+       <input type="text" name="Vendor_name"  [(ngModel)]="productDetails.vendor_name" class="form-control"id="validationServer08" required>
+    </div>
+    <div class="col-md-6">
+    <label for="validationServer09" class="form-label">Product Category Id</label>
+       <input type="text" name="categoryId"  [(ngModel)]="productDetails.CategoryId"   class="form-control"id="validationServer01" required>
+    </div>
+    <div class="col-md-6">
+       <label for="validationServer010" class="form-label">Product Availability</label>
+       <input type="text" name="availability"  [(ngModel)]="productDetails.availability" class="form-control"id="validationServer010" placeholder="yes/no" required>
+    </div>
+    <div class="col-md-6">
+       <label for="validationServer011" class="form-label">Product Image</label>
+       <input type="text" placeholder="type file name" name="image"  [(ngModel)]="productDetails.image" class="form-control"id="validationServer011" required>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+    </form>
+    </div>
+    

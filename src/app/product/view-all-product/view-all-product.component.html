@@ -1,0 +1,71 @@
+<!--category-->>
+<div class="container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="categorySearch('')">
+                <img style="width: 250px;height: 140px;" src="https://i.postimg.cc/3J2HtNR5/fe759957c0b64815aa0064b2921ce31d.jpg" alt="">
+                <h6>All Products</h6>
+            </a>
+
+        </div>
+        &nbsp;
+        &nbsp;
+     <div class="item">
+            <a (click)="categorySearch('1')">
+                <img style="width: 230px;" src="https://i.postimg.cc/CLg2LNFX/download.jpg" alt="">
+                <h6>Electronics</h6>
+            </a>
+
+        </div>
+        &nbsp;
+        &nbsp;
+        <div class="item">
+            <a (click)="categorySearch('2')">
+                <img style="width: 250px; height: 140px; " src="https://i.postimg.cc/wBvZYj6B/1974-JCP-FW-0001.jpg" alt="">
+                <h6>Fashion</h6>
+            </a>
+
+        </div>
+        &nbsp;
+        &nbsp;
+        <div class="item">
+            <a (click)="categorySearch('3')">
+                <img style="width: 250px; height: 140px;"src="https://i.postimg.cc/Ss5pvzCq/Evil-Eye-Necklace-Alexandra-Marks-Jewelry-1000x1000.webp" alt="">
+                <h6>Jwellery</h6>
+            </a>
+
+
+        </div>
+    </div>
+
+ </div>
+ 
+ 
+ 
+ <!-- Section-->
+  <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of  categoryList  |  searchFilter:searchItem:'ProductName'">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" style="height: 300px;" src="{{product.image}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.ProductName}}</h5>
+                            <!-- Product price-->
+                            {{product.price}} Rs
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="products/view-product/{{product.id}}">View options</a></div>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+           </div>
+           </section>
